@@ -14,6 +14,9 @@
 		B7F826A92C4545FF007A1DFB /* AccelerometerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826A82C4545FF007A1DFB /* AccelerometerAppTests.swift */; };
 		B7F826B32C4545FF007A1DFB /* AccelerometerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826B22C4545FF007A1DFB /* AccelerometerAppUITests.swift */; };
 		B7F826B52C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */; };
+		B7F826C22C454713007A1DFB /* AccelereometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C12C454713007A1DFB /* AccelereometerService.swift */; };
+		B7F826C42C454C9C007A1DFB /* ARServiceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C32C454C9C007A1DFB /* ARServiceCoordinator.swift */; };
+		B7F826C62C454D13007A1DFB /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C52C454D13007A1DFB /* ARViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		B7F826AE2C4545FF007A1DFB /* AccelerometerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F826B22C4545FF007A1DFB /* AccelerometerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppUITests.swift; sourceTree = "<group>"; };
 		B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B7F826C12C454713007A1DFB /* AccelereometerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelereometerService.swift; sourceTree = "<group>"; };
+		B7F826C32C454C9C007A1DFB /* ARServiceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARServiceCoordinator.swift; sourceTree = "<group>"; };
+		B7F826C52C454D13007A1DFB /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				B7F826972C4545FE007A1DFB /* AppDelegate.swift */,
-				B7F826992C4545FE007A1DFB /* ContentView.swift */,
+				B7F826C72C454D3A007A1DFB /* Services */,
+				B7F826C82C454D54007A1DFB /* UI */,
 				B7F8269B2C4545FF007A1DFB /* Assets.xcassets */,
 				B7F8269D2C4545FF007A1DFB /* Preview Content */,
 			);
@@ -125,6 +132,24 @@
 				B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */,
 			);
 			path = AccelerometerAppUITests;
+			sourceTree = "<group>";
+		};
+		B7F826C72C454D3A007A1DFB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B7F826C12C454713007A1DFB /* AccelereometerService.swift */,
+				B7F826C32C454C9C007A1DFB /* ARServiceCoordinator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B7F826C82C454D54007A1DFB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B7F826992C4545FE007A1DFB /* ContentView.swift */,
+				B7F826C52C454D13007A1DFB /* ARViewContainer.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F8269A2C4545FE007A1DFB /* ContentView.swift in Sources */,
+				B7F826C42C454C9C007A1DFB /* ARServiceCoordinator.swift in Sources */,
 				B7F826982C4545FE007A1DFB /* AppDelegate.swift in Sources */,
+				B7F826C22C454713007A1DFB /* AccelereometerService.swift in Sources */,
+				B7F826C62C454D13007A1DFB /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,14 +458,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp.AccelerometerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,14 +489,14 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp.AccelerometerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
