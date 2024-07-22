@@ -8,13 +8,19 @@
 import Foundation
 import ARKit
 
-
 class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
     var parent: ARViewContainer
+    var worldTrackingConfig: ARWorldTrackingConfiguration?
     
     init(_ parent: ARViewContainer) {
         self.parent = parent
         super.init()
+        setupWorldTrackingConfiguration()
+    }
+    
+    private func setupWorldTrackingConfiguration() {
+        worldTrackingConfig = ARWorldTrackingConfiguration()
+        worldTrackingConfig?.planeDetection = .vertical
     }
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -29,6 +35,15 @@ class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
         planeNode.eulerAngles.x = -.pi / 2
         
         node.addChildNode(planeNode)
+        
+        // Switch to world tracking configuration after detecting the image
+        if let worldTrackingConfig = worldTrackingConfig {
+            DispatchQueue.main.async { [weak self] in
+                if let arView = renderer as? ARSCNView {
+                    arView.session.run(worldTrackingConfig, options: [.removeExistingAnchors, .resetTracking])
+                }
+            }
+        }
         
         return node
     }
@@ -45,7 +60,22 @@ class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
             let distance = distanceBetweenPoints(cameraPosition, anchorPosition)
             
             DispatchQueue.main.async {
-                self.parent.distance = distance//String(format: "%.2f meters", distance)
+                self.parent.distance = distance
+            }
+        }
+        
+        if worldTrackingConfig != nil {
+            for anchor in currentFrame.anchors {
+                if let planeAnchor = anchor as? ARPlaneAnchor, planeAnchor.alignment == .vertical {
+                    // Perform actions upon detecting a vertical surface
+                    
+                    let anchorPosition = SCNVector3(planeAnchor.transform.columns.3.x, planeAnchor.transform.columns.3.y, planeAnchor.transform.columns.3.z)
+                    let distance = distanceBetweenPoints(cameraPosition, anchorPosition)
+                    
+                    DispatchQueue.main.async {
+                        self.parent.distance = distance
+                    }
+                }
             }
         }
     }
