@@ -9,15 +9,15 @@ import Foundation
 import CoreMotion
 import Combine
 
-protocol AccelereometerServiceProtocol {
+protocol AccelerometerServiceProtocol {
     var motionManager: CMMotionManager { get set }
     var timer: Timer? { get set }
     func startAccelerometer()
 }
 
-final class AccelerometerService: AccelereometerServiceProtocol, ObservableObject {
+final class AccelerometerService: AccelerometerServiceProtocol, ObservableObject {
     var motionManager: CMMotionManager
-     var timer: Timer?
+    var timer: Timer?
     @Published var acceleration: CMAcceleration
     @Published var isLandscape: Bool
     
@@ -31,14 +31,14 @@ final class AccelerometerService: AccelereometerServiceProtocol, ObservableObjec
     
     func startAccelerometer() {
         if motionManager.isAccelerometerAvailable {
-            motionManager.accelerometerUpdateInterval = 0.1
+            motionManager.accelerometerUpdateInterval = 1.0
             motionManager.startAccelerometerUpdates()
             
-            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-                if let data = self.motionManager.accelerometerData {
-                    DispatchQueue.main.async {
-                        self.acceleration = data.acceleration
-                        self.isLandscape = abs(data.acceleration.x) > abs(data.acceleration.y)
+            self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { [weak self] _ in
+                if let data = self?.motionManager.accelerometerData {
+                    DispatchQueue.main.async { [weak self] in
+                        self?.acceleration = data.acceleration
+                        self?.isLandscape = abs(data.acceleration.x) > abs(data.acceleration.y)
                     }
                 }
             }

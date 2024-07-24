@@ -11,6 +11,7 @@ import ARKit
 struct ARViewContainer: UIViewRepresentable {
     @Binding var distance: Float
     
+    
     func makeUIView(context: Context) -> ARSCNView {
         let arView = ARSCNView(frame: .zero)
         arView.delegate = context.coordinator
@@ -18,14 +19,14 @@ struct ARViewContainer: UIViewRepresentable {
         arView.autoenablesDefaultLighting = true
         arView.automaticallyUpdatesLighting = true
         
-        let configuration = ARImageTrackingConfiguration()
+//        let configuration = ARImageTrackingConfiguration()
+//        if let trackedImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) {
+//            configuration.trackingImages = trackedImages
+//            configuration.maximumNumberOfTrackedImages = 1
+//        }
+        context.coordinator.setupImageTrackingConfiguration(arView: arView)
         
-        if let trackedImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) {
-            configuration.trackingImages = trackedImages
-            configuration.maximumNumberOfTrackedImages = 1
-        }
-        
-        arView.session.run(configuration)
+//        arView.session.run(configuration)
         
         return arView
     }

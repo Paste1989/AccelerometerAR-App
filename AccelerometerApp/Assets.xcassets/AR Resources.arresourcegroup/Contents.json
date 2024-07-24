@@ -5,7 +5,25 @@
   },
   "resources" : [
     {
-      "filename" : "cammeleon.arreferenceimage"
+      "filename" : "img1.arreferenceimage"
+    },
+    {
+      "filename" : "img2.arreferenceimage"
+    },
+    {
+      "filename" : "step1.arreferenceimage"
+    },
+    {
+      "filename" : "step2.arreferenceimage"
+    },
+    {
+      "filename" : "step3.arreferenceimage"
+    },
+    {
+      "filename" : "step4.arreferenceimage"
+    },
+    {
+      "filename" : "step5.arreferenceimage"
     }
   ]
 }

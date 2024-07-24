@@ -7,41 +7,73 @@
 
 import Foundation
 import ARKit
+import RealityKit
 
 class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
     var parent: ARViewContainer
     var worldTrackingConfig: ARWorldTrackingConfiguration?
+    var imageTrackingConfig: ARImageTrackingConfiguration?
+    
     
     init(_ parent: ARViewContainer) {
         self.parent = parent
         super.init()
-        setupWorldTrackingConfiguration()
     }
     
-    private func setupWorldTrackingConfiguration() {
+    func setupWorldTrackingConfiguration(arView: ARSCNView) {
+        imageTrackingConfig = nil
+        
         worldTrackingConfig = ARWorldTrackingConfiguration()
         worldTrackingConfig?.planeDetection = .vertical
+        
+        DispatchQueue.main.async { [weak self] in
+            arView.session.run(self?.worldTrackingConfig ?? ARWorldTrackingConfiguration(), options: [.removeExistingAnchors, .resetTracking])
+            print("---> worldTrackingConfig SETUP")
+        }
+    }
+    
+    func setupImageTrackingConfiguration(arView: ARSCNView) {
+        worldTrackingConfig = nil
+        
+        imageTrackingConfig = ARImageTrackingConfiguration()
+        if let trackedImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) {
+            imageTrackingConfig?.trackingImages = trackedImages
+            imageTrackingConfig?.maximumNumberOfTrackedImages = 1
+        }
+        
+        DispatchQueue.main.async { [weak self] in
+            arView.session.run(self?.imageTrackingConfig ?? ARImageTrackingConfiguration(), options: [.removeExistingAnchors, .resetTracking])
+            print("---> imageTrackingConfig SETUP")
+        }
     }
     
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
-        
         let node = SCNNode()
-        let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width,
-                             height: imageAnchor.referenceImage.physicalSize.height)
-        
-        plane.firstMaterial?.diffuse.contents = UIColor(white: 1.0, alpha: 0.5)
-        let planeNode = SCNNode(geometry: plane)
-        planeNode.eulerAngles.x = -.pi / 2
-        
-        node.addChildNode(planeNode)
         
         // Switch to world tracking configuration after detecting the image
-        if let worldTrackingConfig = worldTrackingConfig {
-            DispatchQueue.main.async { [weak self] in
+        if let name = imageAnchor.name {
+            if !name.contains("step") {
                 if let arView = renderer as? ARSCNView {
-                    arView.session.run(worldTrackingConfig, options: [.removeExistingAnchors, .resetTracking])
+                    setupWorldTrackingConfiguration(arView: arView)
                 }
+            }
+            else {
+                if imageTrackingConfig == nil {
+                    if let arView = renderer as? ARSCNView {
+                        setupImageTrackingConfiguration(arView: arView)
+                    }
+                }
+                
+                let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width,
+                                     height: imageAnchor.referenceImage.physicalSize.height)
+                
+                plane.firstMaterial?.diffuse.contents = UIColor.red
+                let planeNode = SCNNode(geometry: plane)
+                planeNode.eulerAngles.x = -.pi / 2
+                
+                node.addChildNode(planeNode)
+                return node
             }
         }
         
@@ -59,8 +91,8 @@ class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
             
             let distance = distanceBetweenPoints(cameraPosition, anchorPosition)
             
-            DispatchQueue.main.async {
-                self.parent.distance = distance
+            DispatchQueue.main.async { [weak self] in
+                self?.parent.distance = distance
             }
         }
         
@@ -72,8 +104,8 @@ class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
                     let anchorPosition = SCNVector3(planeAnchor.transform.columns.3.x, planeAnchor.transform.columns.3.y, planeAnchor.transform.columns.3.z)
                     let distance = distanceBetweenPoints(cameraPosition, anchorPosition)
                     
-                    DispatchQueue.main.async {
-                        self.parent.distance = distance
+                    DispatchQueue.main.async { [weak self] in
+                        self?.parent.distance = distance
                     }
                 }
             }
