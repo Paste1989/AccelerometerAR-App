@@ -9,7 +9,7 @@ import Foundation
 import ARKit
 import RealityKit
 
-class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
+class ARCoordinatorService: NSObject, ARSCNViewDelegate, ARSessionDelegate {
     var parent: ARViewContainer
     var worldTrackingConfig: ARWorldTrackingConfiguration?
     var imageTrackingConfig: ARImageTrackingConfiguration?

@@ -12,6 +12,8 @@ import Combine
 protocol AccelerometerServiceProtocol {
     var motionManager: CMMotionManager { get set }
     var timer: Timer? { get set }
+    var acceleration: CMAcceleration { get set }
+    var isLandscape: Bool { get set }
     func startAccelerometer()
 }
 

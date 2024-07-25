@@ -33,8 +33,8 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
     
-    func makeCoordinator() -> ARServiceCoordinator {
-        ARServiceCoordinator(self)
+    func makeCoordinator() -> ARCoordinatorService {
+        ARCoordinatorService(self)
     }
 }
 

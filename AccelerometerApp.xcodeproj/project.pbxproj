@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7C0A27D2C52485E0015FD7C /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A27C2C52485E0015FD7C /* ARView.swift */; };
+		B7C0A2802C5249DE0015FD7C /* ARViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A27F2C5249DE0015FD7C /* ARViewViewModel.swift */; };
+		B7C0A2832C52509E0015FD7C /* TestInfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2822C52509E0015FD7C /* TestInfoLabelView.swift */; };
+		B7C0A2852C5250C40015FD7C /* InfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2842C5250C40015FD7C /* InfoLabelView.swift */; };
+		B7C0A2872C5250F90015FD7C /* AngleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2862C5250F90015FD7C /* AngleItemView.swift */; };
+		B7C0A2892C5251190015FD7C /* DistanceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2882C5251190015FD7C /* DistanceItemView.swift */; };
 		B7F826982C4545FE007A1DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826972C4545FE007A1DFB /* AppDelegate.swift */; };
 		B7F8269A2C4545FE007A1DFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826992C4545FE007A1DFB /* ContentView.swift */; };
 		B7F8269C2C4545FF007A1DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F8269B2C4545FF007A1DFB /* Assets.xcassets */; };
@@ -15,7 +21,7 @@
 		B7F826B32C4545FF007A1DFB /* AccelerometerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826B22C4545FF007A1DFB /* AccelerometerAppUITests.swift */; };
 		B7F826B52C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */; };
 		B7F826C22C454713007A1DFB /* AccelereometerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C12C454713007A1DFB /* AccelereometerService.swift */; };
-		B7F826C42C454C9C007A1DFB /* ARServiceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C32C454C9C007A1DFB /* ARServiceCoordinator.swift */; };
+		B7F826C42C454C9C007A1DFB /* ARCoordinatorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C32C454C9C007A1DFB /* ARCoordinatorService.swift */; };
 		B7F826C62C454D13007A1DFB /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826C52C454D13007A1DFB /* ARViewContainer.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7C0A27C2C52485E0015FD7C /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		B7C0A27F2C5249DE0015FD7C /* ARViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewViewModel.swift; sourceTree = "<group>"; };
+		B7C0A2822C52509E0015FD7C /* TestInfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInfoLabelView.swift; sourceTree = "<group>"; };
+		B7C0A2842C5250C40015FD7C /* InfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelView.swift; sourceTree = "<group>"; };
+		B7C0A2862C5250F90015FD7C /* AngleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleItemView.swift; sourceTree = "<group>"; };
+		B7C0A2882C5251190015FD7C /* DistanceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceItemView.swift; sourceTree = "<group>"; };
 		B7F826942C4545FE007A1DFB /* AccelerometerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F826972C4545FE007A1DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F826992C4545FE007A1DFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,7 +60,7 @@
 		B7F826B22C4545FF007A1DFB /* AccelerometerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppUITests.swift; sourceTree = "<group>"; };
 		B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7F826C12C454713007A1DFB /* AccelereometerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelereometerService.swift; sourceTree = "<group>"; };
-		B7F826C32C454C9C007A1DFB /* ARServiceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARServiceCoordinator.swift; sourceTree = "<group>"; };
+		B7F826C32C454C9C007A1DFB /* ARCoordinatorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCoordinatorService.swift; sourceTree = "<group>"; };
 		B7F826C52C454D13007A1DFB /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +89,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7C0A27E2C5249C40015FD7C /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0A2812C52508C0015FD7C /* Subviews */,
+				B7C0A27C2C52485E0015FD7C /* ARView.swift */,
+				B7C0A27F2C5249DE0015FD7C /* ARViewViewModel.swift */,
+			);
+			path = ARView;
+			sourceTree = "<group>";
+		};
+		B7C0A2812C52508C0015FD7C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0A2822C52509E0015FD7C /* TestInfoLabelView.swift */,
+				B7F826C52C454D13007A1DFB /* ARViewContainer.swift */,
+				B7C0A2842C5250C40015FD7C /* InfoLabelView.swift */,
+				B7C0A2862C5250F90015FD7C /* AngleItemView.swift */,
+				B7C0A2882C5251190015FD7C /* DistanceItemView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		B7F8268B2C4545FE007A1DFB = {
 			isa = PBXGroup;
 			children = (
@@ -138,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				B7F826C12C454713007A1DFB /* AccelereometerService.swift */,
-				B7F826C32C454C9C007A1DFB /* ARServiceCoordinator.swift */,
+				B7F826C32C454C9C007A1DFB /* ARCoordinatorService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -147,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				B7F826992C4545FE007A1DFB /* ContentView.swift */,
-				B7F826C52C454D13007A1DFB /* ARViewContainer.swift */,
+				B7C0A27E2C5249C40015FD7C /* ARView */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -283,10 +317,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F8269A2C4545FE007A1DFB /* ContentView.swift in Sources */,
-				B7F826C42C454C9C007A1DFB /* ARServiceCoordinator.swift in Sources */,
+				B7F826C42C454C9C007A1DFB /* ARCoordinatorService.swift in Sources */,
+				B7C0A2802C5249DE0015FD7C /* ARViewViewModel.swift in Sources */,
+				B7C0A2872C5250F90015FD7C /* AngleItemView.swift in Sources */,
+				B7C0A2852C5250C40015FD7C /* InfoLabelView.swift in Sources */,
 				B7F826982C4545FE007A1DFB /* AppDelegate.swift in Sources */,
+				B7C0A2832C52509E0015FD7C /* TestInfoLabelView.swift in Sources */,
 				B7F826C22C454713007A1DFB /* AccelereometerService.swift in Sources */,
 				B7F826C62C454D13007A1DFB /* ARViewContainer.swift in Sources */,
+				B7C0A27D2C52485E0015FD7C /* ARView.swift in Sources */,
+				B7C0A2892C5251190015FD7C /* DistanceItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
