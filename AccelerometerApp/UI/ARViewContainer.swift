@@ -10,7 +10,7 @@ import ARKit
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var distance: Float
-    
+    var onVerticalSurfaceDetected: (() -> Void)?
     
     func makeUIView(context: Context) -> ARSCNView {
         let arView = ARSCNView(frame: .zero)
@@ -18,20 +18,20 @@ struct ARViewContainer: UIViewRepresentable {
         arView.session.delegate = context.coordinator
         arView.autoenablesDefaultLighting = true
         arView.automaticallyUpdatesLighting = true
-        
-//        let configuration = ARImageTrackingConfiguration()
-//        if let trackedImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) {
-//            configuration.trackingImages = trackedImages
-//            configuration.maximumNumberOfTrackedImages = 1
-//        }
+
         context.coordinator.setupImageTrackingConfiguration(arView: arView)
-        
-//        arView.session.run(configuration)
-        
+
         return arView
     }
     
-    func updateUIView(_ uiView: ARSCNView, context: Context) {}
+    func updateUIView(_ uiView: ARSCNView, context: Context) {
+        if context.coordinator.worldTrackingConfig != nil {
+            DispatchQueue.main.async {
+                self.onVerticalSurfaceDetected?()
+            }
+            
+        }
+    }
     
     func makeCoordinator() -> ARServiceCoordinator {
         ARServiceCoordinator(self)

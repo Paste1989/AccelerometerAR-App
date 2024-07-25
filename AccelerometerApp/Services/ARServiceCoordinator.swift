@@ -68,7 +68,7 @@ class ARServiceCoordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
                 let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width,
                                      height: imageAnchor.referenceImage.physicalSize.height)
                 
-                plane.firstMaterial?.diffuse.contents = UIColor.red
+                plane.firstMaterial?.diffuse.contents = UIColor.green.withAlphaComponent(0.7)
                 let planeNode = SCNNode(geometry: plane)
                 planeNode.eulerAngles.x = -.pi / 2
                 
