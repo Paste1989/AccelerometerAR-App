@@ -22,8 +22,7 @@ struct ARView: View {
             })
             .edgesIgnoringSafeArea(.all)
             
-            //TestInfoLabelView(accelerometerService: accelerometerService, distance: distance)
-            
+            TestInfoLabelView(viewModel: viewModel)
             
             if viewModel.isVerticalSurfaceDetected {
                 VStack(spacing: 0) {
@@ -75,7 +74,7 @@ struct ARView: View {
                     LinearGradient(gradient: Gradient(colors: [Color.clear, Color.red.opacity(0.5), Color.clear]), startPoint: .trailing, endPoint: .leading)
                         .frame(maxWidth: 60, maxHeight: .infinity)
                         .cornerRadius(100)
-                        .opacity(viewModel.hanldeTrailingAngleBorder() ? 1 : 0)
+                        .opacity(viewModel.handleTrailingAngleBorder() ? 1 : 0)
                 }
                 .padding(-65)
             }

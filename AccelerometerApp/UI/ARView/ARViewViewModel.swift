@@ -20,30 +20,35 @@ final class ARViewViewModel: ObservableObject {
     let upperDistance: Float = 0.3
     let lowerDistance: Float = 0.2
     
+    let topAngle: Double = -0.99
+    let bottomAngle: Double = -0.4
+    let leadingAngle: Double = -0.07
+    let trailingAngle: Double = 0.03
+    
     func isDistanceRangeOk() -> Bool {
         return distance >= lowerDistance && distance <= upperDistance
     }
     
-    func isAngleOk() -> Bool {
-        return accelerometerService.acceleration.x < 1.0 &&
-        accelerometerService.acceleration.x > 0.9 &&
-        accelerometerService.acceleration.y < 0.1 &&
-        accelerometerService.acceleration.y > -0.04
-    }
-    
     func handleTopAngleBorder() -> Bool {
-        return accelerometerService.acceleration.x > 1.0
+        return accelerometerService.acceleration.x < topAngle
     }
     
     func handleBottomAngleBorder() -> Bool {
-        return accelerometerService.acceleration.x < 0.9
+        return accelerometerService.acceleration.z < bottomAngle
     }
     
     func handleLeadingAngleBorder() -> Bool {
-        return accelerometerService.acceleration.y > 0.1
+        return accelerometerService.acceleration.y < leadingAngle
     }
     
-    func hanldeTrailingAngleBorder() -> Bool {
-        return accelerometerService.acceleration.y < -0.04
+    func handleTrailingAngleBorder() -> Bool {
+        return accelerometerService.acceleration.y < trailingAngle
+    }
+    
+    func isAngleOk() -> Bool {
+        return handleTopAngleBorder() &&
+        handleBottomAngleBorder() &&
+        handleLeadingAngleBorder() &&
+        handleTrailingAngleBorder()
     }
 }
