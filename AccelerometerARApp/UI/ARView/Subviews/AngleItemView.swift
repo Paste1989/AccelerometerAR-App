@@ -1,6 +1,6 @@
 //
 //  AngleItemView.swift
-//  AccelerometerApp
+//  AccelerometerARApp
 //
 //  Created by Saša Brezovac on 25.07.2024..
 //

@@ -1,13 +1,13 @@
 //
-//  AccelerometerAppUITestsLaunchTests.swift
-//  AccelerometerAppUITests
+//  AccelerometerARAppUITestsLaunchTests.swift
+//  AccelerometerARAppUITests
 //
 //  Created by Saša Brezovac on 15.07.2024..
 //
 
 import XCTest
 
-final class AccelerometerAppUITestsLaunchTests: XCTestCase {
+final class AccelerometerARAppUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

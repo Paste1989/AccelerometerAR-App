@@ -1,6 +1,6 @@
 //
 //  WebView.swift
-//  AccelerometerApp
+//  AccelerometerARApp
 //
 //  Created by Saša Brezovac on 29.07.2024..
 //

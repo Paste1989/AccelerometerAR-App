@@ -1,6 +1,6 @@
 //
 //  ARView.swift
-//  AccelerometerApp
+//  AccelerometerARApp
 //
 //  Created by Saša Brezovac on 25.07.2024..
 //
@@ -81,11 +81,13 @@ struct ARView: View {
             else {
                 Text("Scan the Poster steps from 1 to 5 to get the useful information instructions.")
                     .frame(width: 200)
+                    .multilineTextAlignment(.center)
                     .font(.caption)
                     .foregroundColor(.white)
                     .padding()
                     .background(.black.opacity(0.4))
                     .cornerRadius(30)
+                
             }
         }
     }

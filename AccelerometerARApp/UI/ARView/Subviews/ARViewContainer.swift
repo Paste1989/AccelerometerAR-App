@@ -1,6 +1,6 @@
 //
 //  ARViewContainer.swift
-//  AccelerometerApp
+//  AccelerometerARApp
 //
 //  Created by Saša Brezovac on 15.07.2024..
 //
