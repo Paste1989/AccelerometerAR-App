@@ -22,7 +22,7 @@ struct ARView: View {
             })
             .edgesIgnoringSafeArea(.all)
             
-            TestInfoLabelView(viewModel: viewModel)
+            //TestInfoLabelView(viewModel: viewModel)
             
             if viewModel.isVerticalSurfaceDetected {
                 VStack(spacing: 0) {
