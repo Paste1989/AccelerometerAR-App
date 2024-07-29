@@ -5,7 +5,25 @@
   },
   "resources" : [
     {
-      "filename" : "cammeleon.arreferenceimage"
+      "filename" : "img1.arreferenceimage"
+    },
+    {
+      "filename" : "img2.arreferenceimage"
+    },
+    {
+      "filename" : "step1.arreferenceimage"
+    },
+    {
+      "filename" : "step2_shape.arreferenceimage"
+    },
+    {
+      "filename" : "step3_material_flow.arreferenceimage"
+    },
+    {
+      "filename" : "step4_pressure.arreferenceimage"
+    },
+    {
+      "filename" : "step5.arreferenceimage"
     }
   ]
 }

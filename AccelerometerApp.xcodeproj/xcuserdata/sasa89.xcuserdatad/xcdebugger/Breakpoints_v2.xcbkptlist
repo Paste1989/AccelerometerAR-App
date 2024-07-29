@@ -3,4 +3,54 @@
    uuid = "81C3C8C9-1C7B-4A24-8E59-F31FAB78F2FF"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "844ABFC8-7DA2-41B9-9D89-9BDC6FA05BD9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AccelerometerApp/Services/AccelereometerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "startAccelerometer()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "844ABFC8-7DA2-41B9-9D89-9BDC6FA05BD9 - 120f556739e5f18b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AccelerometerApp.AccelerometerService.startAccelerometer() -&gt; ()"
+                  moduleName = "AccelerometerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sasa89/Desktop/AccelerometerApp/AccelerometerApp/Services/AccelereometerService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "824">
+               </Location>
+               <Location
+                  uuid = "844ABFC8-7DA2-41B9-9D89-9BDC6FA05BD9 - 120f556739e5f1ac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AccelerometerApp.AccelerometerService.startAccelerometer() -&gt; ()"
+                  moduleName = "AccelerometerApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sasa89/Desktop/AccelerometerApp/AccelerometerApp/Services/AccelereometerService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "720">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
