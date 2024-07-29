@@ -10,6 +10,7 @@ import ARKit
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var distance: Float
+    @State var isGifShown: Bool = false
     var onVerticalSurfaceDetected: (() -> Void)?
     
     func makeUIView(context: Context) -> ARSCNView {

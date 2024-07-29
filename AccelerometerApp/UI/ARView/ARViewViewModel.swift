@@ -52,3 +52,14 @@ final class ARViewViewModel: ObservableObject {
         return accelerometerService.acceleration.y > trailingAngle
     }
 }
+
+
+enum ImageGIF: String {
+    case shape
+    case material
+    case pressure
+    
+    static var allGifs: [ImageGIF] {
+        return [.shape, .material, .pressure]
+    }
+}

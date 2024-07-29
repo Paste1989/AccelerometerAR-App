@@ -13,6 +13,10 @@
 		B7C0A2852C5250C40015FD7C /* InfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2842C5250C40015FD7C /* InfoLabelView.swift */; };
 		B7C0A2872C5250F90015FD7C /* AngleItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2862C5250F90015FD7C /* AngleItemView.swift */; };
 		B7C0A2892C5251190015FD7C /* DistanceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2882C5251190015FD7C /* DistanceItemView.swift */; };
+		B7C0A28F2C57B9A80015FD7C /* material.gif in Resources */ = {isa = PBXBuildFile; fileRef = B7C0A28C2C57B9A80015FD7C /* material.gif */; };
+		B7C0A2902C57B9A80015FD7C /* pressure.gif in Resources */ = {isa = PBXBuildFile; fileRef = B7C0A28D2C57B9A80015FD7C /* pressure.gif */; };
+		B7C0A2912C57B9A80015FD7C /* shape.gif in Resources */ = {isa = PBXBuildFile; fileRef = B7C0A28E2C57B9A80015FD7C /* shape.gif */; };
+		B7C0A2942C57BB720015FD7C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2932C57BB720015FD7C /* WebView.swift */; };
 		B7F826982C4545FE007A1DFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826972C4545FE007A1DFB /* AppDelegate.swift */; };
 		B7F8269A2C4545FE007A1DFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F826992C4545FE007A1DFB /* ContentView.swift */; };
 		B7F8269C2C4545FF007A1DFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7F8269B2C4545FF007A1DFB /* Assets.xcassets */; };
@@ -49,6 +53,10 @@
 		B7C0A2842C5250C40015FD7C /* InfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelView.swift; sourceTree = "<group>"; };
 		B7C0A2862C5250F90015FD7C /* AngleItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleItemView.swift; sourceTree = "<group>"; };
 		B7C0A2882C5251190015FD7C /* DistanceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceItemView.swift; sourceTree = "<group>"; };
+		B7C0A28C2C57B9A80015FD7C /* material.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = material.gif; sourceTree = "<group>"; };
+		B7C0A28D2C57B9A80015FD7C /* pressure.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pressure.gif; sourceTree = "<group>"; };
+		B7C0A28E2C57B9A80015FD7C /* shape.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shape.gif; sourceTree = "<group>"; };
+		B7C0A2932C57BB720015FD7C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		B7F826942C4545FE007A1DFB /* AccelerometerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F826972C4545FE007A1DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F826992C4545FE007A1DFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +119,32 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		B7C0A28A2C57B9860015FD7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0A28B2C57B9980015FD7C /* gifs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B7C0A28B2C57B9980015FD7C /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0A28C2C57B9A80015FD7C /* material.gif */,
+				B7C0A28D2C57B9A80015FD7C /* pressure.gif */,
+				B7C0A28E2C57B9A80015FD7C /* shape.gif */,
+			);
+			path = gifs;
+			sourceTree = "<group>";
+		};
+		B7C0A2922C57BB580015FD7C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B7C0A2932C57BB720015FD7C /* WebView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B7F8268B2C4545FE007A1DFB = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +171,8 @@
 				B7F826972C4545FE007A1DFB /* AppDelegate.swift */,
 				B7F826C72C454D3A007A1DFB /* Services */,
 				B7F826C82C454D54007A1DFB /* UI */,
+				B7C0A28A2C57B9860015FD7C /* Resources */,
+				B7C0A2922C57BB580015FD7C /* Helpers */,
 				B7F8269B2C4545FF007A1DFB /* Assets.xcassets */,
 				B7F8269D2C4545FF007A1DFB /* Preview Content */,
 			);
@@ -291,6 +327,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F8269F2C4545FF007A1DFB /* Preview Assets.xcassets in Resources */,
+				B7C0A2912C57B9A80015FD7C /* shape.gif in Resources */,
+				B7C0A2902C57B9A80015FD7C /* pressure.gif in Resources */,
+				B7C0A28F2C57B9A80015FD7C /* material.gif in Resources */,
 				B7F8269C2C4545FF007A1DFB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +364,7 @@
 				B7C0A2832C52509E0015FD7C /* TestInfoLabelView.swift in Sources */,
 				B7F826C22C454713007A1DFB /* AccelereometerService.swift in Sources */,
 				B7F826C62C454D13007A1DFB /* ARViewContainer.swift in Sources */,
+				B7C0A2942C57BB720015FD7C /* WebView.swift in Sources */,
 				B7C0A27D2C52485E0015FD7C /* ARView.swift in Sources */,
 				B7C0A2892C5251190015FD7C /* DistanceItemView.swift in Sources */,
 			);

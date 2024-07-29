@@ -8,12 +8,16 @@
 import Foundation
 import ARKit
 import RealityKit
+import SpriteKit
+import SceneKit
+import ImageIO
 
 class ARCoordinatorService: NSObject, ARSCNViewDelegate, ARSessionDelegate {
     var parent: ARViewContainer
     var worldTrackingConfig: ARWorldTrackingConfiguration?
     var imageTrackingConfig: ARImageTrackingConfiguration?
     
+    let allGIFs: [ImageGIF] = ImageGIF.allGifs
     
     init(_ parent: ARViewContainer) {
         self.parent = parent
@@ -51,29 +55,33 @@ class ARCoordinatorService: NSObject, ARSCNViewDelegate, ARSessionDelegate {
         guard let imageAnchor = anchor as? ARImageAnchor else { return nil }
         let node = SCNNode()
         
-        // Switch to world tracking configuration after detecting the image
-        if let name = imageAnchor.name {
-            if !name.contains("step") {
-                if let arView = renderer as? ARSCNView {
-                    setupWorldTrackingConfiguration(arView: arView)
-                }
-            }
-            else {
-                if imageTrackingConfig == nil {
-                    if let arView = renderer as? ARSCNView {
-                        setupImageTrackingConfiguration(arView: arView)
+        if let name = imageAnchor.name, name.contains("step") {
+            let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width,
+                                 height: imageAnchor.referenceImage.physicalSize.height)
+            
+            let planeNode = SCNNode(geometry: plane)
+            planeNode.eulerAngles.x = -.pi / 2
+            
+            
+            for i in allGIFs {
+                print("gif name: \(i.rawValue) == anch: \(name)")
+                if name.contains(i.rawValue) {
+                    if let gifScene = createGifSKScene(gifName: i.rawValue, size: CGSize(width: 1024, height: 1024)) {
+                        plane.firstMaterial?.diffuse.contents = gifScene
+                        node.addChildNode(planeNode)
+                    }
+                    else {
+                        plane.firstMaterial?.diffuse.contents = UIColor.green.withAlphaComponent(0.7)
+                        node.addChildNode(planeNode)
                     }
                 }
-                
-                let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width,
-                                     height: imageAnchor.referenceImage.physicalSize.height)
-                
-                plane.firstMaterial?.diffuse.contents = UIColor.green.withAlphaComponent(0.7)
-                let planeNode = SCNNode(geometry: plane)
-                planeNode.eulerAngles.x = -.pi / 2
-                
-                node.addChildNode(planeNode)
-                return node
+            }
+            
+            return node
+            
+        } else {
+            if let arView = renderer as? ARSCNView {
+                setupWorldTrackingConfiguration(arView: arView)
             }
         }
         
@@ -117,5 +125,42 @@ class ARCoordinatorService: NSObject, ARSCNViewDelegate, ARSessionDelegate {
         let dy = pointA.y - pointB.y
         let dz = pointA.z - pointB.z
         return sqrt(dx * dx + dy * dy + dz * dz)
+    }
+    
+    func createGifSKScene(gifName: String, size: CGSize) -> SKScene? {
+        guard let gifURL = Bundle.main.url(forResource: gifName, withExtension: "gif"),
+              let gifData = try? Data(contentsOf: gifURL) else { return nil }
+        
+        let gifOptions = [kCGImageSourceShouldCache as String: false]
+        guard let gifSource = CGImageSourceCreateWithData(gifData as CFData, gifOptions as CFDictionary) else { return nil }
+        
+        let gifCount = CGImageSourceGetCount(gifSource)
+        var frames = [SKTexture]()
+        var duration: TimeInterval = 0
+        
+        for i in 0..<gifCount {
+            if let frame = CGImageSourceCreateImageAtIndex(gifSource, i, gifOptions as CFDictionary) {
+                let properties = CGImageSourceCopyPropertiesAtIndex(gifSource, i, nil) as? [CFString: Any]
+                let gifProperties = properties?[kCGImagePropertyGIFDictionary] as? [CFString: Any]
+                let delayTime = (gifProperties?[kCGImagePropertyGIFUnclampedDelayTime] as? TimeInterval)
+                ?? (gifProperties?[kCGImagePropertyGIFDelayTime] as? TimeInterval)
+                ?? 0.1
+                
+                duration += delayTime
+                let texture = SKTexture(cgImage: frame)
+                frames.append(texture)
+            }
+        }
+        
+        let spriteScene = SKScene(size: size)
+        let spriteNode = SKSpriteNode(texture: frames.first)
+        spriteNode.position = CGPoint(x: size.width / 2, y: size.height / 2)
+        spriteScene.addChild(spriteNode)
+        
+        spriteNode.run(SKAction.repeatForever(
+            SKAction.animate(with: frames, timePerFrame: duration / Double(frames.count))
+        ))
+        
+        return spriteScene
     }
 }
