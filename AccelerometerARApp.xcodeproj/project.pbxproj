@@ -57,14 +57,14 @@
 		B7C0A28D2C57B9A80015FD7C /* pressure.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pressure.gif; sourceTree = "<group>"; };
 		B7C0A28E2C57B9A80015FD7C /* shape.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = shape.gif; sourceTree = "<group>"; };
 		B7C0A2932C57BB720015FD7C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		B7F826942C4545FE007A1DFB /* AccelerometerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F826942C4545FE007A1DFB /* AccelerometerARApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerARApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F826972C4545FE007A1DFB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7F826992C4545FE007A1DFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B7F8269B2C4545FF007A1DFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7F8269E2C4545FF007A1DFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B7F826A42C4545FF007A1DFB /* AccelerometerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F826A42C4545FF007A1DFB /* AccelerometerARAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerARAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F826A82C4545FF007A1DFB /* AccelerometerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppTests.swift; sourceTree = "<group>"; };
-		B7F826AE2C4545FF007A1DFB /* AccelerometerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7F826AE2C4545FF007A1DFB /* AccelerometerARAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerARAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7F826B22C4545FF007A1DFB /* AccelerometerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppUITests.swift; sourceTree = "<group>"; };
 		B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B7F826C12C454713007A1DFB /* AccelereometerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelereometerService.swift; sourceTree = "<group>"; };
@@ -148,9 +148,9 @@
 		B7F8268B2C4545FE007A1DFB = {
 			isa = PBXGroup;
 			children = (
-				B7F826962C4545FE007A1DFB /* AccelerometerApp */,
-				B7F826A72C4545FF007A1DFB /* AccelerometerAppTests */,
-				B7F826B12C4545FF007A1DFB /* AccelerometerAppUITests */,
+				B7F826962C4545FE007A1DFB /* AccelerometerARApp */,
+				B7F826A72C4545FF007A1DFB /* AccelerometerARAppTests */,
+				B7F826B12C4545FF007A1DFB /* AccelerometerARAppUITests */,
 				B7F826952C4545FE007A1DFB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,14 +158,14 @@
 		B7F826952C4545FE007A1DFB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B7F826942C4545FE007A1DFB /* AccelerometerApp.app */,
-				B7F826A42C4545FF007A1DFB /* AccelerometerAppTests.xctest */,
-				B7F826AE2C4545FF007A1DFB /* AccelerometerAppUITests.xctest */,
+				B7F826942C4545FE007A1DFB /* AccelerometerARApp.app */,
+				B7F826A42C4545FF007A1DFB /* AccelerometerARAppTests.xctest */,
+				B7F826AE2C4545FF007A1DFB /* AccelerometerARAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B7F826962C4545FE007A1DFB /* AccelerometerApp */ = {
+		B7F826962C4545FE007A1DFB /* AccelerometerARApp */ = {
 			isa = PBXGroup;
 			children = (
 				B7F826972C4545FE007A1DFB /* AppDelegate.swift */,
@@ -176,7 +176,7 @@
 				B7F8269B2C4545FF007A1DFB /* Assets.xcassets */,
 				B7F8269D2C4545FF007A1DFB /* Preview Content */,
 			);
-			path = AccelerometerApp;
+			path = AccelerometerARApp;
 			sourceTree = "<group>";
 		};
 		B7F8269D2C4545FF007A1DFB /* Preview Content */ = {
@@ -187,21 +187,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		B7F826A72C4545FF007A1DFB /* AccelerometerAppTests */ = {
+		B7F826A72C4545FF007A1DFB /* AccelerometerARAppTests */ = {
 			isa = PBXGroup;
 			children = (
 				B7F826A82C4545FF007A1DFB /* AccelerometerAppTests.swift */,
 			);
-			path = AccelerometerAppTests;
+			path = AccelerometerARAppTests;
 			sourceTree = "<group>";
 		};
-		B7F826B12C4545FF007A1DFB /* AccelerometerAppUITests */ = {
+		B7F826B12C4545FF007A1DFB /* AccelerometerARAppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				B7F826B22C4545FF007A1DFB /* AccelerometerAppUITests.swift */,
 				B7F826B42C4545FF007A1DFB /* AccelerometerAppUITestsLaunchTests.swift */,
 			);
-			path = AccelerometerAppUITests;
+			path = AccelerometerARAppUITests;
 			sourceTree = "<group>";
 		};
 		B7F826C72C454D3A007A1DFB /* Services */ = {
@@ -225,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B7F826932C4545FE007A1DFB /* AccelerometerApp */ = {
+		B7F826932C4545FE007A1DFB /* AccelerometerARApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7F826B82C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerApp" */;
+			buildConfigurationList = B7F826B82C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerARApp" */;
 			buildPhases = (
 				B7F826902C4545FE007A1DFB /* Sources */,
 				B7F826912C4545FE007A1DFB /* Frameworks */,
@@ -237,14 +237,14 @@
 			);
 			dependencies = (
 			);
-			name = AccelerometerApp;
+			name = AccelerometerARApp;
 			productName = AccelerometerApp;
-			productReference = B7F826942C4545FE007A1DFB /* AccelerometerApp.app */;
+			productReference = B7F826942C4545FE007A1DFB /* AccelerometerARApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B7F826A32C4545FF007A1DFB /* AccelerometerAppTests */ = {
+		B7F826A32C4545FF007A1DFB /* AccelerometerARAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7F826BB2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerAppTests" */;
+			buildConfigurationList = B7F826BB2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerARAppTests" */;
 			buildPhases = (
 				B7F826A02C4545FF007A1DFB /* Sources */,
 				B7F826A12C4545FF007A1DFB /* Frameworks */,
@@ -255,14 +255,14 @@
 			dependencies = (
 				B7F826A62C4545FF007A1DFB /* PBXTargetDependency */,
 			);
-			name = AccelerometerAppTests;
+			name = AccelerometerARAppTests;
 			productName = AccelerometerAppTests;
-			productReference = B7F826A42C4545FF007A1DFB /* AccelerometerAppTests.xctest */;
+			productReference = B7F826A42C4545FF007A1DFB /* AccelerometerARAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B7F826AD2C4545FF007A1DFB /* AccelerometerAppUITests */ = {
+		B7F826AD2C4545FF007A1DFB /* AccelerometerARAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B7F826BE2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerAppUITests" */;
+			buildConfigurationList = B7F826BE2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerARAppUITests" */;
 			buildPhases = (
 				B7F826AA2C4545FF007A1DFB /* Sources */,
 				B7F826AB2C4545FF007A1DFB /* Frameworks */,
@@ -273,9 +273,9 @@
 			dependencies = (
 				B7F826B02C4545FF007A1DFB /* PBXTargetDependency */,
 			);
-			name = AccelerometerAppUITests;
+			name = AccelerometerARAppUITests;
 			productName = AccelerometerAppUITests;
-			productReference = B7F826AE2C4545FF007A1DFB /* AccelerometerAppUITests.xctest */;
+			productReference = B7F826AE2C4545FF007A1DFB /* AccelerometerARAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -301,7 +301,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B7F8268F2C4545FE007A1DFB /* Build configuration list for PBXProject "AccelerometerApp" */;
+			buildConfigurationList = B7F8268F2C4545FE007A1DFB /* Build configuration list for PBXProject "AccelerometerARApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -314,9 +314,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B7F826932C4545FE007A1DFB /* AccelerometerApp */,
-				B7F826A32C4545FF007A1DFB /* AccelerometerAppTests */,
-				B7F826AD2C4545FF007A1DFB /* AccelerometerAppUITests */,
+				B7F826932C4545FE007A1DFB /* AccelerometerARApp */,
+				B7F826A32C4545FF007A1DFB /* AccelerometerARAppTests */,
+				B7F826AD2C4545FF007A1DFB /* AccelerometerARAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,12 +392,12 @@
 /* Begin PBXTargetDependency section */
 		B7F826A62C4545FF007A1DFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B7F826932C4545FE007A1DFB /* AccelerometerApp */;
+			target = B7F826932C4545FE007A1DFB /* AccelerometerARApp */;
 			targetProxy = B7F826A52C4545FF007A1DFB /* PBXContainerItemProxy */;
 		};
 		B7F826B02C4545FF007A1DFB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B7F826932C4545FE007A1DFB /* AccelerometerApp */;
+			target = B7F826932C4545FE007A1DFB /* AccelerometerARApp */;
 			targetProxy = B7F826AF2C4545FF007A1DFB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -529,7 +529,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AccelerometerApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AccelerometerARApp/Preview Content\"";
 				DEVELOPMENT_TEAM = QHG34765G4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -545,7 +545,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerARApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -560,7 +560,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"AccelerometerApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AccelerometerARApp/Preview Content\"";
 				DEVELOPMENT_TEAM = QHG34765G4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -576,7 +576,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerARApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -595,12 +595,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp.AccelerometerAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerARApp.AccelerometerAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AccelerometerApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerARApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AccelerometerARApp";
 			};
 			name = Debug;
 		};
@@ -615,12 +615,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp.AccelerometerAppTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerARApp.AccelerometerAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AccelerometerApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerARApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AccelerometerARApp";
 			};
 			name = Release;
 		};
@@ -633,12 +633,12 @@
 				DEVELOPMENT_TEAM = QHG34765G4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp.AccelerometerAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerARApp.AccelerometerARAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AccelerometerApp;
+				TEST_TARGET_NAME = AccelerometerARApp;
 			};
 			name = Debug;
 		};
@@ -651,19 +651,19 @@
 				DEVELOPMENT_TEAM = QHG34765G4;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerApp.AccelerometerAppUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paste89.accelerometerARApp.AccelerometerARAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AccelerometerApp;
+				TEST_TARGET_NAME = AccelerometerARApp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B7F8268F2C4545FE007A1DFB /* Build configuration list for PBXProject "AccelerometerApp" */ = {
+		B7F8268F2C4545FE007A1DFB /* Build configuration list for PBXProject "AccelerometerARApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7F826B62C4545FF007A1DFB /* Debug */,
@@ -672,7 +672,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7F826B82C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerApp" */ = {
+		B7F826B82C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerARApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7F826B92C4545FF007A1DFB /* Debug */,
@@ -681,7 +681,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7F826BB2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerAppTests" */ = {
+		B7F826BB2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerARAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7F826BC2C4545FF007A1DFB /* Debug */,
@@ -690,7 +690,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7F826BE2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerAppUITests" */ = {
+		B7F826BE2C4545FF007A1DFB /* Build configuration list for PBXNativeTarget "AccelerometerARAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B7F826BF2C4545FF007A1DFB /* Debug */,

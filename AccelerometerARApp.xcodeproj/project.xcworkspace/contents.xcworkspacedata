@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Users/sasa89/Desktop/AccelerometerApp/AccelerometerARApp.xcodeproj">
    </FileRef>
 </Workspace>
