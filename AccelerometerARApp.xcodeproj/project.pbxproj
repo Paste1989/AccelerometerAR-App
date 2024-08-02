@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B750C0A32C57D251008281D2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750C0A22C57D251008281D2 /* Localizable.swift */; };
+		B750C0A72C57D2D6008281D2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B750C0A62C57D2D6008281D2 /* Localizable.strings */; };
+		B750C0AA2C57D380008281D2 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750C0A92C57D380008281D2 /* String+Extensions.swift */; };
+		B750C0AD2C57D729008281D2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750C0AC2C57D729008281D2 /* Images.swift */; };
 		B7C0A27D2C52485E0015FD7C /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A27C2C52485E0015FD7C /* ARView.swift */; };
 		B7C0A2802C5249DE0015FD7C /* ARViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A27F2C5249DE0015FD7C /* ARViewViewModel.swift */; };
 		B7C0A2832C52509E0015FD7C /* TestInfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0A2822C52509E0015FD7C /* TestInfoLabelView.swift */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B750C0A22C57D251008281D2 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		B750C0A62C57D2D6008281D2 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		B750C0A92C57D380008281D2 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B750C0AC2C57D729008281D2 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		B7C0A27C2C52485E0015FD7C /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		B7C0A27F2C5249DE0015FD7C /* ARViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewViewModel.swift; sourceTree = "<group>"; };
 		B7C0A2822C52509E0015FD7C /* TestInfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestInfoLabelView.swift; sourceTree = "<group>"; };
@@ -97,6 +105,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B750C09E2C57D190008281D2 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				B750C0A22C57D251008281D2 /* Localizable.swift */,
+				B750C0A62C57D2D6008281D2 /* Localizable.strings */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		B750C0A82C57D372008281D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B750C0A92C57D380008281D2 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B750C0AB2C57D71B008281D2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B750C0AC2C57D729008281D2 /* Images.swift */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		B7C0A27E2C5249C40015FD7C /* ARView */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				B7C0A28B2C57B9980015FD7C /* gifs */,
+				B750C09E2C57D190008281D2 /* Localizables */,
+				B750C0AB2C57D71B008281D2 /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -168,6 +203,7 @@
 		B7F826962C4545FE007A1DFB /* AccelerometerARApp */ = {
 			isa = PBXGroup;
 			children = (
+				B750C0A82C57D372008281D2 /* Extensions */,
 				B7F826972C4545FE007A1DFB /* AppDelegate.swift */,
 				B7F826C72C454D3A007A1DFB /* Services */,
 				B7F826C82C454D54007A1DFB /* UI */,
@@ -327,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7F8269F2C4545FF007A1DFB /* Preview Assets.xcassets in Resources */,
+				B750C0A72C57D2D6008281D2 /* Localizable.strings in Resources */,
 				B7C0A2912C57B9A80015FD7C /* shape.gif in Resources */,
 				B7C0A2902C57B9A80015FD7C /* pressure.gif in Resources */,
 				B7C0A28F2C57B9A80015FD7C /* material.gif in Resources */,
@@ -362,6 +399,9 @@
 				B7C0A2852C5250C40015FD7C /* InfoLabelView.swift in Sources */,
 				B7F826982C4545FE007A1DFB /* AppDelegate.swift in Sources */,
 				B7C0A2832C52509E0015FD7C /* TestInfoLabelView.swift in Sources */,
+				B750C0AD2C57D729008281D2 /* Images.swift in Sources */,
+				B750C0A32C57D251008281D2 /* Localizable.swift in Sources */,
+				B750C0AA2C57D380008281D2 /* String+Extensions.swift in Sources */,
 				B7F826C22C454713007A1DFB /* AccelereometerService.swift in Sources */,
 				B7F826C62C454D13007A1DFB /* ARViewContainer.swift in Sources */,
 				B7C0A2942C57BB720015FD7C /* WebView.swift in Sources */,

@@ -12,12 +12,12 @@ struct DistanceItemView: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            Image(systemName: viewModel.isDistanceRangeOk() ? "checkmark.circle.fill" : "xmark.circle")
+            Image(systemName: viewModel.isDistanceRangeOk() ? "\(Images.distance_ok.rawValue)" : "\(Images.distance_bad.rawValue)")
                 .frame(width: 30, height:  30)
                 .foregroundColor(.white)
                 .padding(.leading)
             
-            Text(viewModel.isDistanceRangeOk() ? "Good distance" : "Bad distance")
+            Text(viewModel.isDistanceRangeOk() ? "\(Localizable.good_distance_title.local)" : "\(Localizable.bad_distance_title.local)")
                 .foregroundColor(.white)
                 .padding(.trailing)
         }

@@ -12,12 +12,12 @@ struct AngleItemView: View {
     
     var body: some View {
         HStack(spacing: 10) {
-            Image(systemName: "angle")
+            Image(systemName: "\(Images.angle.rawValue)")
                 .frame(width: 30, height:  30)
                 .foregroundColor(.white)
                 .padding(.leading)
             
-            Text(viewModel.isAngleOk() ? "Good angle" : "Bad angle")
+            Text(viewModel.isAngleOk() ? "\(Localizable.good_angle_title.local)" : "\(Localizable.bad_angle_title.local)")
             .foregroundColor(.white)
             .padding(.trailing)
         }

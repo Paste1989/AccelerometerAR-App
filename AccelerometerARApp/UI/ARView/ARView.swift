@@ -79,7 +79,7 @@ struct ARView: View {
                 .padding(-65)
             }
             else {
-                Text("Scan the Poster steps from 1 to 5 to get the useful information instructions.")
+                Text(Localizable.general_scan_instruction.local)
                     .frame(width: 200)
                     .multilineTextAlignment(.center)
                     .font(.caption)
@@ -87,7 +87,6 @@ struct ARView: View {
                     .padding()
                     .background(.black.opacity(0.4))
                     .cornerRadius(30)
-                
             }
         }
     }

@@ -12,12 +12,12 @@ struct TestInfoLabelView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            Text("Distance:")
-            Text(String(format: "%.2f meters", viewModel.distance))
+            Text("\(Localizable.distance_title.local):")
+            Text(String(format: "%.2f \(Localizable.meters_string.local)", viewModel.distance))
                 .font(.headline)
                 .padding(.bottom)
             
-            Text("Acceleration:")
+            Text("\(Localizable.acceleration_title.local):")
             Text("x: \(viewModel.accelerometerService.acceleration.x, specifier: "%.2f")")
                 .font(.headline)
             Text("y: \(viewModel.accelerometerService.acceleration.y, specifier: "%.2f")")
@@ -26,11 +26,11 @@ struct TestInfoLabelView: View {
                 .font(.headline)
             
             if viewModel.accelerometerService.isLandscape {
-                Text("Landscape Mode")
+                Text(Localizable.lanscape_title.local)
                     .font(.headline)
                     .padding()
             } else {
-                Text("Portrait Mode")
+                Text(Localizable.portrait_title.local)
                     .font(.headline)
                     .padding()
             }

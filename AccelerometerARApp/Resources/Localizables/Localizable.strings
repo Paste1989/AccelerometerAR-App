@@ -1,0 +1,23 @@
+//
+//  Localizables.swift
+//  AccelerometerARApp
+//
+//  Created by Saša Brezovac on 29.07.2024..
+
+// MARK: - Strings
+
+"app_name" = "Almefy";
+"general_scan_instruction" = "Scan the poster steps from 1 to 5 for useful information and instructions.";
+"distance_title" = "Distance";
+"acceleration_title" = "Acceleration";
+"landscape_title" = "Landscape Mode";
+"portrait_title" = "Portarit Mode";
+"meters_string" = "meters";
+"distance_indicator_title" = "Distance indicator";
+"angle_indicator_title" = "Angle indicator";
+"distance_info_description" = "20 to 30 centimeters is ideal distance from teh wall. If you move beyond that range the indicator will turn red.";
+"angle_info_description" = "Keep your wrist straight and avoid flexing your hands. When you make a mistake, the indicator will turn red and a red line wll appear on the tilted side of the scren.";
+"good_angle_title" = "Good angle";
+"bad_angle_title" = "Bad angle";
+"good_distance_title" = "Good distance";
+"bad_distance_title" = "Bad distance";

@@ -18,12 +18,12 @@ struct InfoLabelView: View {
                 .offset(x:isDistanceInfo ? -60 : 60, y: isDistanceInfo ? -63.5 : -76.5)
             
             VStack(spacing: 0) {
-                Text(isDistanceInfo ? "Distance indicator" : "Angle indicator")
+                Text(isDistanceInfo ? "\(Localizable.distance_title.local)" : "\(Localizable.angle_indicator_title.local)")
                     .font(.caption)
                     .foregroundColor(.yellow)
                     .padding(.top)
                 
-                Text(isDistanceInfo ? "20 to 30 centimeters is ideal distance from teh wall. If you move beyond that range the indicator will turn red." : "Keep your wrist straight and avoid flexing your hands. When you make a mistake, the indicator will turn red and a red line wll appear on the tilted side of the scren.")
+                Text(isDistanceInfo ? "\(Localizable.distance_info_description.local)" : "\(Localizable.angle_info_description.local)")
                     .fixedSize(horizontal: false, vertical: true)
                     .font(.caption2)
                     .foregroundColor(.white)
